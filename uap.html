@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UAP WEB</title>
+  </head>
+  <body>
+    <h2 style="text-align: center; color: darkturquoise;">Data Pembayaran</h2>
+    <div class="container" style="display: flex; justify-content: center; align-items: center;">
+        <table border="true">
+          <thead>
+            <tr>
+              <th>Inputan User</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><label for="kode">Kode</label></td>
+              <td><input type="text" id="kode" /></td>
+            </tr>
+            <tr>
+              <td><label for="barang">Banyaknya Barang</label></td>
+              <td><input type="text" id="banyak_barang" /></td>
+            </tr>
+            <td>
+              <button id="submit">Submit</button>
+            </td>
+          </tbody>
+        </table>
+    </div>
+
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <table id="tableData"  border="true" style="width: 50%; height: 50%; margin-top: 4em">
+          <thead>
+            <tr>
+              <th>Data Barang</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <label for="kode">Kode</label>
+              </td>
+              <td>
+                <label for="barang">Barang</label>
+              </td>
+              <td>
+                <label for="harga">Harga</label>
+              </td>
+            </tr>
+            <tr id="data"></tr>
+          </tbody>
+        </table>
+    </div>
+
+    <script>
+      var kode = document.getElementById("kode");
+      var barang = document.getElementById("banyak_barang");
+      var data = document.getElementById("data");
+      var submitButton = document.getElementById("submit");
+      var tableData = document.getElementById("tableData");
+
+      submitButton.addEventListener("click", function () {
+        var kodeInput = kode.value;
+        var barangInput = barang.value;
+        alert("Data Berhasil Ditambahkan");
+        
+      });
+
+    </script>
+  </body>
+</html>
